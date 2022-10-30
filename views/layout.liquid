@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fetch Rewards</title>
+  <!-- Milligram CSS for Some Default Styling -->
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto:ital@1&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  {%- comment -%} <!-- CSS Reset -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+
+ <!-- Milligram CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" /> 
+
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
+
+  <!-- OUR CSS AND JS -->
+  <link rel="stylesheet" href="/css/app.css" />
+  <script src="/server.js" defer></script> {%- endcomment -%}
+
+
+
+
+</head>
+
+<body>
+  <div id="titleBlock">
+  <header >
+    <a  href="/">
+      <h1 class="font-bold text-6xl text-center ">fetch</h1>
+      <h5 class="font-light text-2xl text-center mt-0 p-0 ">Rewards</h5>
+    </a>
+  </header>
+  <!-- navigation items -->
+  <nav id="nav">
+    <div class="flex justify-end mr-10 font-bold">
+      <a  href="/">
+      <button class="border-2 bg-black rounded-md text-white  pr-2 pl-2 p-1"> New User</button>
+      </a>
+    </div>
+  </nav>
+</div>
+
+  <main>{% block content %}My default content{% endblock %}</main>
+
+  <footer></footer>
+</body>
+
+</html> 

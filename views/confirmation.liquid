@@ -1,0 +1,19 @@
+{% layout "layout.liquid" %}
+{% block content %}
+  <h1>Hello,{{response.name}}
+  </h1>
+  <h1>Successfully submitted!</h1>
+
+  <div class="flex-col">
+    <h2>Summary</h2>
+    <h3>User ID: {{response.id}}</h3>
+    <h3>Name: {{response.name}}</h3>
+    <h3>Email: {{response.email}}</h3>
+    <h3>Occupation: {{response.occupation}}</h3>
+    <h3>State: {{response.state}}</h3>
+
+  </div>
+
+
+
+{% endblock %}

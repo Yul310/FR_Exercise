@@ -1,51 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>New User</h1>
+{% layout "layout.liquid" %}
+{% block content %}
+  <h1 class="m-auto text-center font-bold text-2xl pt-[60px]">New User Form</h1>
 
-    <div class="loginBody">
-      <div class="login">
-        <form action='/create' method="post">
-          <fieldset>
-            <legend>
-              <h3 class="loginTitle">
-                Sign-Up
-              </h3>
-            </legend>
-            <label>NAME: <input type="text" name="name" value="a" required/>
-            </label>
-            <label>EMAIL: <input type="email" name="email" value="a@email.com" required/>
-            </label>
-            </label>
-            <label>PASSWORD: <input type="password" name="password" value="a" required/>
-            </label>
-            <label>OCCUPATION: </label>
-                <select type = "occupation" name = "occupation"   required>
-                    {% for occupation in occupations %}
-                        <option type = "occupation" name = "occupation" >{{occupation}}</option>
-                    {% endfor %}
-                </select>
+  <div>
+    <div class="flex flex-col pt-[20px]">
+      <form action='/create' method="post" class="m-auto">
+        <fieldset class="flex flex-col m-auto min-w-500 max-w-lg border-4 bg-[#FFDF7E] border-[#FF9900] rounded-xl p-4 drop-shadow-[0_15px_15px_rgba(0,0,0,0.25)] px-10 pt-[40px] pb-[40px]">
 
-            <label>STATE: </label>
-           
-            {%- comment -%} <input type="state" name="state" required/> {%- endcomment -%}
-                <select  type = "state" name = "state" required>
-                    {% for state in states %}
-                        <option>{{state.name}},{{state.abbreviation}}</option>
-                    {% endfor %}
-                </select>  
+          <label class="font-bold">Name</label>
+          <input class="mb-3 font-normal rounded-md px-2 border- border-black drop-shadow-md w-80" type="text" name="name" placeholder="Your name..." required/>
 
-            <input type="submit" value="Create"/>
-          </fieldset>
-        </form>
-      </div>
+          <label class="font-bold">Email</label>
+          <input class="mb-3 font-normal rounded-md px-2 border- border-black drop-shadow-md w-80" type="email" name="email" placeholder="Your email address..." required/>
+
+          <label class="font-bold">PASSWORD</label>
+          <input class="mb-3 font-normal rounded-md px-2 border- border-black drop-shadow-md w-80" type="password" name="password" placeholder="Your password..." required/>
+
+          <label class="font-bold">OCCUPATION</label>
+          <select class="mb-3 font-normal rounded-md px-2 border- border-black drop-shadow-md w-80" type="occupation" name="occupation" required>
+            <option disabled selected value>-- select an option --</option>
+            {% for occupation in occupations %}
+              <option name="occupation">{{occupation}}</option>
+            {% endfor %}
+          </select>
+
+          <label class="font-bold">STATE</label>
+          <select class="mb-3 font-normal rounded-md px-2 border- border-black drop-shadow-md w-80" type="state" name="state" required>
+            <option disabled selected value>-- select an option --</option>
+            {% for state in states %}
+              <option>{{state.name}},{{state.abbreviation}}</option>
+            {% endfor %}
+          </select>
+
+          <input type="submit" value="Submit Form"/>
+        </fieldset>
+      </form>
     </div>
+  </div>
 
 
 
-  </body>
-</html>
+{% endblock %}
