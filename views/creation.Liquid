@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>New User</h1>
+
+    <div class="loginBody">
+      <div class="login">
+        <form action='/create' method="post">
+          <fieldset>
+            <legend>
+              <h3 class="loginTitle">
+                Sign-Up
+              </h3>
+            </legend>
+            <label>NAME: <input type="text" name="name" value="a" required/>
+            </label>
+            <label>EMAIL: <input type="email" name="email" value="a@email.com" required/>
+            </label>
+            </label>
+            <label>PASSWORD: <input type="password" name="password" value="a" required/>
+            </label>
+            <label>OCCUPATION: </label>
+                <select type = "occupation" name = "occupation"   required>
+                    {% for occupation in occupations %}
+                        <option type = "occupation" name = "occupation" >{{occupation}}</option>
+                    {% endfor %}
+                </select>
+
+            <label>STATE: </label>
+           
+            {%- comment -%} <input type="state" name="state" required/> {%- endcomment -%}
+                <select  type = "state" name = "state" required>
+                    {% for state in states %}
+                        <option>{{state.name}}</option>
+                    {% endfor %}
+                </select>  
+
+            <input type="submit" value="Create"/>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
