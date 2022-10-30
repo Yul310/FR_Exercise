@@ -34,15 +34,16 @@ app.post('/create', async (req, res)=>{
 
     console.log(req.body)
 
-    // let data = req.body
+    let data = req.body
 
-    let data = {
-        name: 'sam',
-        email: 'sam@email.com',
-        password: 'tomato123',
-        occupation: 'Head of Shrubbery',
-        state: {name:'Alabama',abbreviation:'AL'}
-    }
+    // let data = {
+    //     name: 'sam',
+    //     email: 'sam@email.com',
+    //     password: 'tomato123',
+    //     occupation: 'Head of Shrubbery',
+    //     state: {name: 'North Dakota', abbreviation: 'ND'}
+      
+    // }
 
 
 
@@ -54,11 +55,17 @@ app.post('/create', async (req, res)=>{
     },
       body: JSON.stringify(data) 
     })
+    .then((apiResponse) => {
+        console.log('return')
+        return apiResponse.json()
+       
+    })
     .catch((error) => {
         console.log(error);
         response.json({ error });
       });
     console.log(response)
+    res.redirect('https://frontend-take-home.fetchrewards.com/form')
 
 
 })

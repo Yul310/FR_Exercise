@@ -35,7 +35,7 @@
             {%- comment -%} <input type="state" name="state" required/> {%- endcomment -%}
                 <select  type = "state" name = "state" required>
                     {% for state in states %}
-                        <option>{{state.name}}</option>
+                        <option>{{state.name}},{{state.abbreviation}}</option>
                     {% endfor %}
                 </select>  
 
