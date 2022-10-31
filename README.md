@@ -13,6 +13,8 @@ install =>
 to start =>
 - nodemon start
 
+## Screenshots
+![New User Sign-up Page](./img/sc1.png)
 
 ## Technologies used
 - express 

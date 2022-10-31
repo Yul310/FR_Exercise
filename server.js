@@ -25,7 +25,6 @@ app.get('/', function(req, res){
         .catch((error) => {
             console.log(error)
         })
-        console.log(response)
         let occupations = response.occupations
         let states = response.states
         res.render('creation',{occupations,states})
@@ -49,10 +48,8 @@ app.post('/create', async (req, res)=>{
         return apiResponse.json()
     })
     .catch((error) => {
-        console.log(error);
         response.json({ error });
     })
-    console.log(response)
     res.render('confirmation',{response})
 })
 
