@@ -5,13 +5,13 @@ I used Express since I thought using a light weight framework is better for this
 
 ## Dependencies
 install =>
-npm init
-npm install express
-npm install liquid-express-views
-npm i nodemon
+- npm init
+- npm install express
+- npm install liquid-express-views
+- npm i nodemon
 
 to start =>
-nodemon start
+- nodemon start
 
 
 ## Technologies used
