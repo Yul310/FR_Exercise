@@ -1,17 +1,27 @@
 {% layout "layout.liquid" %}
 {% block content %}
-  <h1>Hello,{{response.name}}
+  <h1 class="m-auto text-center font-bold text-4xl pt-[60px] text-[#2F0D39]">
+    Hello, {{response.name}}.
   </h1>
-  <h1>Successfully submitted!</h1>
 
-  <div class="flex-col">
-    <h2>Summary</h2>
-    <h3>User ID: {{response.id}}</h3>
-    <h3>Name: {{response.name}}</h3>
-    <h3>Email: {{response.email}}</h3>
-    <h3>Occupation: {{response.occupation}}</h3>
-    <h3>State: {{response.state}}</h3>
+  <h1 class="m-auto text-center font-bold text-2xl pt-[30] pb-[50px] text-[#2F0D39]">
+    Your account is <br>created successfully !
+  </h1>
 
+
+
+  <div class="flex flex-col m-auto min-w-500 max-w-lg border-4 bg-[#FFDF7E] border-[#FF9900] rounded-3xl p-4 drop-shadow-[0_15px_15px_rgba(0,0,0,0.25)] px-10 pt-[20px] pb-[20px]">
+    <h2 class="m-auto text-center font-extrabold text-3xl pt-[30px] text-[#2F0D39]">Summary</h2>
+    <h3 class="font-bold mt-4 text-[#2F0D39]">User ID: {{response.id}}</h3>
+    <h3 class="font-bold mt-1 text-[#2F0D39]">Name: {{response.name}}</h3>
+    <h3 class="font-bold mt-1 text-[#2F0D39]">Email: {{response.email}}</h3>
+    <h3 class="font-bold mt-1 text-[#2F0D39]">Occupation: {{response.occupation}}</h3>
+    <h3 class="font-bold mt-1 text-[#2F0D39]">State: {{response.state}}</h3>
+    <a href="/" class="mt-3 mb-10 bg-[#2F0D39] rounded-md text-white text-center font-bold drop-shadow-md p-2">
+      <button>
+        Go back to sign-up page
+      </button>
+    </a>
   </div>
 
 

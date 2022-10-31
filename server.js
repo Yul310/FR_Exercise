@@ -55,7 +55,6 @@ app.post('/create', async (req, res)=>{
     })
     console.log(response)
     res.render('confirmation',{response})
-    // res.redirect('/confirmation')
 })
 
 
@@ -69,19 +68,3 @@ app.listen(PORT, () => {
 
 
 
-// async function postData(url = '', data = {}) {
-//     // Default options are marked with *
-//     const response = await fetch(url, {
-//       method: 'POST', // *GET, POST, PUT, DELETE, etc.
-//       body: JSON.stringify(data) 
-//     });
-//     return response.json(); // parses JSON response into native JavaScript objects
-//   }
-  
-//   postData('https://frontend-take-home.fetchrewards.com/form', data)
-//     .then((data) => {
-//       console.log(data); // JSON data parsed by `data.json()` call
-//     });
-
-
-     //   https://frontend-take-home.fetchrewards.com/form
