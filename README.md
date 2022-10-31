@@ -15,6 +15,7 @@ to start =>
 
 ## Screenshots
 ![New User Sign-up Page](./img/sc1.png)
+![Confirmation Page](./img/sc2.png)
 
 ## Technologies used
 - express 
