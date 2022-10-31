@@ -1,5 +1,4 @@
 const express = require('express')
-const morgan = require("morgan");
 const PORT = 3000
 const app = require("liquid-express-views")(express());
 
