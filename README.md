@@ -15,7 +15,7 @@ to start =>
 
 
 ## Technologies used
-express /
-Javascript /
-liquid JS /
-Tailwind 
+- express 
+- Javascript 
+- liquid JS 
+- Tailwind 
