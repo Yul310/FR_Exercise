@@ -1,6 +1,6 @@
 # FR_Exercise
 
-I used Express since I thought using a light weight framework is better for this assignment. 
+Express & Liquid were used since using lightweight frameworks seems better for this assignment. 
 
 
 ## Dependencies
@@ -12,6 +12,9 @@ install =>
 
 to start =>
 - nodemon start
+
+go to => 
+http://localhost:3000/
 
 ## Screenshots
 ![New User Sign-up Page](./img/sc1.png)
